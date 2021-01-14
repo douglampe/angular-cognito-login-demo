@@ -59,6 +59,33 @@
                   "maximumError": "4kb"
                 }
               ]
+            },
+            "local": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.local.ts"
+                }
+              ],
+              "optimization": false,
+              "outputHashing": "all",
+              "sourceMap": true,
+              "namedChunks": true,
+              "extractLicenses": true,
+              "vendorChunk": true,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ]
             }
           }
         },
@@ -70,6 +97,9 @@
           "configurations": {
             "production": {
               "browserTarget": "angular-cognito-login-demo:build:production"
+            },
+            "local": {
+              "browserTarget": "angular-cognito-login-demo:build:local"
             }
           }
         },
